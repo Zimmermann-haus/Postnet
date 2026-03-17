@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ApplicationForFiscalPrinter": {
+      "commandName": "Project",
+      "commandLineArgs": "2104"
+    }
+  }
+}

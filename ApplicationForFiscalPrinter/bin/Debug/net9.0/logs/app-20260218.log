@@ -1,0 +1,8 @@
+2026-02-18 15:47:31.811 +01:00 [INF] ApplicationForFiscalPrinter - START
+2026-02-18 15:47:31.914 +01:00 [INF] Start procesu dla DocumentId: 2104
+2026-02-18 15:47:31.977 +01:00 [INF] Pobieranie dokumentu z bazy
+2026-02-18 15:47:34.733 +01:00 [INF] Mapowanie dokumentu na paragon fiskalny
+2026-02-18 15:47:34.744 +01:00 [INF] Wysyłanie paragonu do drukarki fiskalnej
+2026-02-18 15:47:34.746 +01:00 [INF] Pozycje paragonu:
+2026-02-18 15:47:34.749 +01:00 [INF] Item: 49200 VAT=PRZYGOTOWANIE DOKUMENTACJI Price=0
+2026-02-18 15:47:34.752 +01:00 [INF] Proces zakończony poprawnie
