@@ -1,7 +1,0 @@
-2026-01-13 13:45:43.007 +01:00 [INF] ApplicationForFiscalPrinter - START
-2026-01-13 13:45:43.042 +01:00 [INF] Start procesu dla DocumentId: 1056
-2026-01-13 13:45:43.073 +01:00 [INF] Pobieranie dokumentu z bazy
-2026-01-13 13:45:43.845 +01:00 [INF] Mapowanie dokumentu na paragon fiskalny
-2026-01-13 13:45:43.850 +01:00 [INF] Wysyłanie paragonu do drukarki fiskalnej
-2026-01-13 13:45:43.858 +01:00 [INF] Wysyłka paragonu do drukarki fiskalnej
-2026-01-13 13:45:45.795 +01:00 [INF] Proces zakończony poprawnie

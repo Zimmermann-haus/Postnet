@@ -14,10 +14,15 @@ public class DocumentRepository
             SELECT
                 d.Doc_ID,
                 d.Doc_FullNumber,
+                d.Doc_Code,
+                d.Doc_IntColumn28,
+                d.Doc_LeadingDocID,
                 d.Doc_GrossValue,
-            
+                d.Doc_IntColumn5,
                 p.Del_ID,
                 p.Del_DocID,
+                p.Del_ItmID,
+                p.Del_ErpSeqNo,
                 p.Del_Name,
                 p.Del_VATRate,
                 p.Del_GrossValue as Del_Price,
@@ -48,6 +53,30 @@ public class DocumentRepository
         );
 
         return result.FirstOrDefault();
+    }
+
+    public async Task<List<DocumentPositions>> GetRelatedPositionsByLeadingIdAsync(int leadingDocId, int excludeDocId)
+    {
+        using var connection = DbConnectionFactory.Create();
+
+        const string sql = """
+            SELECT
+                p.Del_ID,
+                p.Del_DocID,
+                p.Del_ItmID,
+                p.Del_ErpSeqNo,
+                p.Del_Name,
+                p.Del_VATRate,
+                p.Del_GrossValue as Del_Price,
+                p.Del_Amount
+            FROM Documents d
+            JOIN DocElems p ON d.Doc_ID = p.Del_DocID
+            WHERE d.Doc_LeadingDocID = @LeadingId AND d.Doc_ID != @ExcludeDocId
+            """;
+
+        var rows = await connection.QueryAsync<DocumentPositions>(sql, new { LeadingId = leadingDocId, ExcludeDocId = excludeDocId });
+
+        return rows.ToList();
     }
 
 }

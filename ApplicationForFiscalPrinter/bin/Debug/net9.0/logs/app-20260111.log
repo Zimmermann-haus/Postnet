@@ -1,5 +1,0 @@
-2026-01-11 11:38:42.015 +01:00 [ERR] Nie podano poprawnego DocumentId
-2026-01-11 11:54:20.639 +01:00 [INF] Start procesu dla DocumentId: 1034
-2026-01-11 11:54:20.843 +01:00 [INF] Pobieranie dokumentu z bazy
-2026-01-11 11:54:27.209 +01:00 [INF] Wysyłanie dokumentu do drukarki fiskalnej
-2026-01-11 11:54:27.212 +01:00 [INF] Proces zakończony poprawnie

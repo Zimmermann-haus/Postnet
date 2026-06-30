@@ -9,11 +9,13 @@ public static class FiscalReceiptMapper
 
     public static FiscalReceiptDto Map(Document document)
     {
+
         if (document.DocumentPositions.Count == 0)
             throw new Exception("Dokument nie zawiera pozycji");
 
         var lines = document.DocumentPositions.Select(p =>
         {
+
             if (p.Del_Amount <= 0)
                 throw new Exception("Ilość musi być większa od zera");
 
